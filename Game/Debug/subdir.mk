@@ -4,21 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../Levels.cpp \
-../Player.cpp \
-../Question.cpp \
 ../Runner.cpp 
 
 OBJS += \
-./Levels.o \
-./Player.o \
-./Question.o \
 ./Runner.o 
 
 CPP_DEPS += \
-./Levels.d \
-./Player.d \
-./Question.d \
 ./Runner.d 
 
 

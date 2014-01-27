@@ -8,6 +8,9 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/trivia/subdir.mk
+-include src/player/subdir.mk
+-include src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -37,19 +40,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: GameC++
+all: Game
 
 # Tool invocations
-GameC++: $(OBJS) $(USER_OBJS)
+Game: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "GameC++" $(OBJS) $(USER_OBJS) $(LIBS)
+	@echo 'Invoking: MacOS X C++ Linker'
+	g++  -o "Game" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) GameC++
+	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS) Game
 	-@echo ' '
 
 .PHONY: all clean dependents
