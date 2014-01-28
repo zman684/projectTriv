@@ -1,0 +1,25 @@
+#include "Question.h"
+#include <fstream>
+
+Question::Question(std::string text, int level, std::vector<std::string> answers, int rAnswer){
+	Question::text = text;
+	Question::level = level;
+	Question::answers = answers;
+	Question::rightAnswer = rAnswer;
+}
+
+std::vector<Question> Question::getQuestions(std::string path){
+	std::string line;
+	  ifstream myfile ("example.txt");
+	  if (myfile.is_open())
+	  {
+	    while ( getline (myfile,line) )
+	    {
+	      cout << line << '\n';
+	    }
+	    myfile.close();
+	  }
+
+	  else cout << "Unable to open file";
+	  return NULL;
+}

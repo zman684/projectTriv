@@ -1,15 +1,15 @@
-20:27:36 **** Incremental Build of configuration Debug for project Game ****
+07:41:48 **** Incremental Build of configuration Debug for project Game ****
 make all 
-Building file: ../player/Player.cpp
+Building file: ../Engine.cpp
 Invoking: GCC C++ Compiler
-g++ -I"/Users/zach/Documents/projectTriv/Game/`gcc -print-prog-name=cc1plus` -v" -I"/Users/zach/Documents/projectTriv/Game/`gcc -print-prog-name=cc1` -v" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"player/Player.d" -MT"player/Player.d" -o "player/Player.o" "../player/Player.cpp"
-Finished building: ../player/Player.cpp
+g++ -I"/Users/zach/Documents/projectTriv/Game/`gcc -print-prog-name=cc1plus` -v" -I"/Users/zach/Documents/projectTriv/Game/`gcc -print-prog-name=cc1` -v" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Engine.d" -MT"Engine.d" -o "Engine.o" "../Engine.cpp"
+Finished building: ../Engine.cpp
  
 Building target: Game
 Invoking: MacOS X C++ Linker
 g++  -o "Game"  ./trivia/Question.o  ./player/Player.o  ./Engine.o   
 Finished building target: Game
  
-20:27:38 **** Incremental Build of configuration Debug for project Game ****
+07:41:53 **** Incremental Build of configuration Debug for project Game ****
 make all 
 make: Nothing to be done for `all'.

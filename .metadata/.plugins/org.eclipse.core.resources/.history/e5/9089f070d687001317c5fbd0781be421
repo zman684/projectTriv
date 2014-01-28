@@ -1,0 +1,44 @@
+#include "Question.h"
+#include <fstream>
+
+Question::Question(std::string text, int level,
+		std::vector<std::string> answers, int rAnswer) {
+	Question::text = text;
+	Question::level = level;
+	Question::answers = answers;
+	Question::rightAnswer = rAnswer;
+}
+
+std::vector<Question> Question::getQuestions(std::string path) {
+	std::string line;
+	std::vector<Question> q;
+	std::ifstream myfile(path);
+	//4 steps for con
+	std::string sum;
+	std::string text;
+	int level ;
+	std::vector<std::string> answers;
+	int rAnswer;
+	//counter
+	int count = 0;
+	if (myfile.is_open()) {
+		while (std::getline(myfile, line)) {
+			for(int i = 0; i < line.length(); i++){
+				if(i == ','){
+					std::cout << sum << std::endl;
+					count++;
+				}else{
+					sum += line.at(i);
+					std::cout<< line.at(i) << endl;
+				}
+			}
+		}
+		myfile.close();
+	}
+	std::vector<std::string> b(4);
+	b.push_back("hello");
+	b.push_back("helllo");
+	Question a("hello", 1, b, 0);
+	q.push_back(a);
+	return q;
+}

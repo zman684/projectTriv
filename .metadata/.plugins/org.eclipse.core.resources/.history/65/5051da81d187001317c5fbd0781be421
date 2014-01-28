@@ -1,0 +1,26 @@
+#include "Question.h"
+#include <fstream>
+
+Question::Question(std::string text, int level, std::vector<std::string> answers, int rAnswer){
+	Question::text = text;
+	Question::level = level;
+	Question::answers = answers;
+	Question::rightAnswer = rAnswer;
+}
+
+std::vector<Question> Question::getQuestions(std::string path){
+	std::string line;
+	  std::ifstream myfile ("example.txt");
+	  if (myfile.is_open())
+	  {
+	    while ( getline (myfile,line) )
+	    {
+	      std::cout << line << '\n';
+	    }
+	    myfile.close();
+	  }
+	  std::vector<std::string> b(3);
+	  std::b.add("hello");
+	  Question a ("hello",1,b,0);
+	  return a;
+}

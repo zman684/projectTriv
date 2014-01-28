@@ -1,0 +1,6 @@
+#include "Question.h"
+
+Question::Question(std::string text, int level, std::string answers[], int rAnswer){
+	Question::text = text;
+	Question::level = level;
+}

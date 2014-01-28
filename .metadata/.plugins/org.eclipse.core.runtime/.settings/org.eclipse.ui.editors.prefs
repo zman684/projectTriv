@@ -14,6 +14,7 @@ deletionIndicationColor=255,0,0
 eclipse.preferences.version=1
 javaScriptOccurrenceIndicationColor=97,97,97
 lineNumberColor=255,0,0
+lineNumberRuler=true
 matchingTagIndicationColor=97,97,97
 occurrenceIndicationColor=97,97,97
 org.eclipse.cdt.ui.occurrenceIndicationColor=97,97,97
