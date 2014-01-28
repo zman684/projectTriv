@@ -8,9 +8,8 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/trivia/subdir.mk
--include src/player/subdir.mk
--include src/subdir.mk
+-include trivia/subdir.mk
+-include player/subdir.mk
 -include subdir.mk
 -include objects.mk
 
