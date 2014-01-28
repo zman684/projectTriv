@@ -4,6 +4,7 @@
 #include "trivia/Question.h"
 
 Player p;
+std::vector<Question> questions;
 
 void start() {
 	std::string name;
@@ -11,12 +12,10 @@ void start() {
 	std::cin >> name;
 	p.setName(name);
 	std::cout << "\n" << "Welcome " << name << "!" << std::endl;
-//	std::cout << p.toString();
 }
 
-std::vector<Question> getQuestions(std::string path) {
+void getQuestions(std::string path) {
 	std::string line;
-	std::vector<Question> q;
 	std::ifstream myfile(path);
 	//4 steps for con
 	std::string sum;
@@ -53,17 +52,16 @@ std::vector<Question> getQuestions(std::string path) {
 				}
 			}
 			Question a(text, level, answers, rAnswer);
-			q.push_back(a);
+			questions.push_back(a);
 		}
 		myfile.close();
 	}
 
-	return q;
 }
 
 int main() {
 //	start();
-	std::vector<Question> b;
-	b = getQuestions("trivia/level1");
+	getQuestions("trivia/level1");
+	std::cout << questions.at(0).show();
 	return 0;
 }

@@ -8,3 +8,13 @@ Question::Question(std::string text, int level,
 	Question::rightAnswer = rAnswer;
 }
 
+std::string Question::show(){
+	std::string sum;
+	sum += level;
+	sum += ": "  + text + "\n";
+	for(int i = 0; i < answers.size(); i++){
+		sum += answers.at(i) + "\n";
+	}
+	return sum;
+}
+

@@ -8,16 +8,15 @@
 #ifndef PLAYER_H_
 #define PLAYER_H_
 
-class Player{
+class Player {
 private:
-std::string name;
-double score;
+	std::string name;
+	double score;
 public:
-Player(std::string name);
-Player();
-void setName(std::string name);
-std::string toString();
+	Player(std::string name);
+	Player();
+	void setName(std::string name);
+	std::string toString();
 };
-
 
 #endif /* PLAYER_H_ */

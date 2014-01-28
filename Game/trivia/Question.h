@@ -9,17 +9,17 @@
 #ifndef QUESTION_H_
 #define QUESTION_H_
 
-class Question{
+class Question {
 private:
-std::string text;
-int level;
-std::vector<std::string> answers;
-int rightAnswer;
+	std::string text;
+	int level;
+	std::vector<std::string> answers;
+	int rightAnswer;
 
 public:
-Question(std::string text, int level, std::vector<std::string> answers, int rAnswer);
+	Question(std::string text, int level, std::vector<std::string> answers,
+			int rAnswer);
+	std::string show();
 };
-
-
 
 #endif /* QUESTION_H_ */
