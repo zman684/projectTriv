@@ -20,6 +20,7 @@ public:
 	Question(std::string text, int level, std::vector<std::string> answers,
 			int rAnswer);
 	std::string show();
+        std::string getAnswer();
 };
 
 #endif /* QUESTION_H_ */

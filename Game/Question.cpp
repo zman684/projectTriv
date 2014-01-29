@@ -1,4 +1,5 @@
 #include "Question.h"
+#include "Player.h"
 #include <sstream>
 
 Question::Question(std::string text, int level,
@@ -19,5 +20,9 @@ std::string Question::show() {
         sum += answers.at(i) + "\n";
     }
     return sum;
+}
+
+std::string Question::getAnswer(){
+    return Question::answers.at(Question::rightAnswer);
 }
 

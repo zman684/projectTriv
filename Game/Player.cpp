@@ -20,3 +20,8 @@ std::string Player::toString(){
 	sum += std::to_string(Player::score) + "\n";
 	return sum;
 }
+
+void Player::addScore(int score){
+    Player::score += score;
+//    std::cout << atoi(score.c_str());
+}

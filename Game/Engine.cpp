@@ -14,6 +14,13 @@ void start() {
     std::cout << "\n" << "Welcome " << name << "!" << std::endl;
 }
 
+void answer(std::string answer, Question q){
+    std::transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+    if(answer == q.getAnswer()){
+        std::cout << "Correct! \t Your score in now " << "score"; 
+    }
+}
+
 void getQuestions(std::string path) {
     std::string line;
     std::ifstream myfile(path);
@@ -59,5 +66,9 @@ int main() {
     //	start();
     getQuestions("level1.txt");
     std::cout << questions.at(0).show();
+    std::cout << "\nWhat is the correct answer: ";
+    std::string temp;
+    std::cin >> temp;
+    answer(temp, questions.at(0));
     return 0;
 }
