@@ -17,7 +17,7 @@ void Player::setName(std::string s){
 std::string Player::toString(){
 	std::string sum;
 	sum += Player::name + "\n";
-	sum += std::to_string(Player::score) + "\n";
+//	sum += std::to_string(Player::score) + "\n";
 	return sum;
 }
 

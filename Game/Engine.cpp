@@ -32,6 +32,7 @@ void getQuestions(std::string path) {
     int rAnswer = 0;
     //counter
     int count = 0;
+    int atoi (const char * str);
     if (myfile.is_open()) {
         while (std::getline(myfile, line)) {
             for (int i = 0; i < line.length(); i++) {
