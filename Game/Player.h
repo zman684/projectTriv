@@ -18,6 +18,7 @@ public:
 	void setName(std::string name);
 	std::string toString();
         void addScore(int score);
+        std::string getScore();
 };
 
 #endif /* PLAYER_H_ */

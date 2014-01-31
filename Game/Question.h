@@ -21,6 +21,7 @@ public:
 			int rAnswer);
 	std::string show();
         std::string getAnswer();
+        int getLevel();
 };
 
 #endif /* QUESTION_H_ */

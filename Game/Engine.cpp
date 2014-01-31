@@ -14,10 +14,14 @@ void start() {
     std::cout << "\n" << "Welcome " << name << "!" << std::endl;
 }
 
-void answer(std::string answer, Question q){
-    std::transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
-    if(answer == q.getAnswer()){
-        std::cout << "Correct! \t Your score in now " << "score"; 
+void answer(std::string answer, Question q) {
+    std::string temp = "";
+    for(int i = 0; i < answer.length(); i ++){
+        temp += std::tolower(answer.at(i));
+    }
+    if (temp == q.getAnswer()) {
+        p.addScore(q.getLevel() * 10);
+        std::cout << "Correct! \t Your score in now " << p.getScore();
     }
 }
 
@@ -32,7 +36,7 @@ void getQuestions(std::string path) {
     int rAnswer = 0;
     //counter
     int count = 0;
-    int atoi (const char * str);
+    int atoi(const char * str);
     if (myfile.is_open()) {
         while (std::getline(myfile, line)) {
             for (int i = 0; i < line.length(); i++) {
@@ -64,7 +68,7 @@ void getQuestions(std::string path) {
 }
 
 int main() {
-    //	start();
+    start();
     getQuestions("level1.txt");
     std::cout << questions.at(0).show();
     std::cout << "\nWhat is the correct answer: ";

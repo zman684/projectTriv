@@ -23,5 +23,8 @@ std::string Player::toString(){
 
 void Player::addScore(int score){
     Player::score += score;
-//    std::cout << atoi(score.c_str());
+}
+
+std::string Player::getScore(){
+    return std::to_string(Player::score);
 }

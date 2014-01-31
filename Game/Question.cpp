@@ -26,3 +26,6 @@ std::string Question::getAnswer(){
     return Question::answers.at(Question::rightAnswer);
 }
 
+int Question::getLevel(){
+    return Question::level;
+}
