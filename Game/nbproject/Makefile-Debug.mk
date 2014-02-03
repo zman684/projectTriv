@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-Linux-x86
-CND_DLIB_EXT=so
+CND_PLATFORM=GNU-MacOSX
+CND_DLIB_EXT=dylib
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Engine.o \
+	${OBJECTDIR}/Maze.o \
 	${OBJECTDIR}/Player.o \
 	${OBJECTDIR}/Question.o
 
@@ -68,6 +69,11 @@ ${OBJECTDIR}/Engine.o: Engine.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine.o Engine.cpp
+
+${OBJECTDIR}/Maze.o: Maze.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Maze.o Maze.cpp
 
 ${OBJECTDIR}/Player.o: Player.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Maze.h</itemPath>
       <itemPath>Player.h</itemPath>
       <itemPath>Question.h</itemPath>
     </logicalFolder>
@@ -16,6 +17,7 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Engine.cpp</itemPath>
+      <itemPath>Maze.cpp</itemPath>
       <itemPath>Player.cpp</itemPath>
       <itemPath>Question.cpp</itemPath>
     </logicalFolder>
@@ -42,6 +44,10 @@
       <compileType>
       </compileType>
       <item path="Engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Maze.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Maze.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -75,6 +81,10 @@
         </asmTool>
       </compileType>
       <item path="Engine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Maze.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Maze.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Player.cpp" ex="false" tool="1" flavor2="0">
       </item>

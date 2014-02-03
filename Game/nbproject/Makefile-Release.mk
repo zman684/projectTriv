@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Engine.o \
+	${OBJECTDIR}/Maze.o \
 	${OBJECTDIR}/Player.o \
 	${OBJECTDIR}/Question.o
 
@@ -68,6 +69,11 @@ ${OBJECTDIR}/Engine.o: Engine.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Engine.o Engine.cpp
+
+${OBJECTDIR}/Maze.o: Maze.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Maze.o Maze.cpp
 
 ${OBJECTDIR}/Player.o: Player.cpp 
 	${MKDIR} -p ${OBJECTDIR}
